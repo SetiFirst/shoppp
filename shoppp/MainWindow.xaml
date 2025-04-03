@@ -7,16 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="shop" AutoGenerateColumns="False" ItemsSource="{Binding ProductCollection}">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Title" Binding="{Binding Title}" />
-                <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
-                <DataGridTextColumn Header="Category" Binding="{Binding Category}" />
-                <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
-            </DataGrid.Columns>
-        </DataGrid>
+        <WrapPanel>
+            <StackPanel>
+                <DataGrid x:Name="shop" AutoGenerateColumns="False" ItemsSource="{Binding ProductCollection}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Title" Width="100" Binding="{Binding Title}" />
+                        <DataGridTextColumn Header="Description" Width="100" Binding="{Binding Description}" />
+                        <DataGridTextColumn Header="Category" Width="100" Binding="{Binding Category}" />
+                        <DataGridTextColumn Header="Price" Width="100" Binding="{Binding Price}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
 
-        <TextBox x:Name="searchTextBox" Margin="214,154,365,234"/>
-        <Button x:Name="searchButton" Click="searchButton_Click" Margin="454,157,236,234" RenderTransformOrigin="0.537,1.049" Content="Найти!"/>
+            <StackPanel VerticalAlignment="Center">
+                <TextBox x:Name="searchTextBox" Width="300" Margin="10"/>
+                <Button x:Name="searchButton" Width="300" Click="searchButton_Click"  RenderTransformOrigin="0.537,1.049" Content="Найти!"/>
+            </StackPanel>
+        </WrapPanel>
     </Grid>
 </Window>

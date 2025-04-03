@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace shoppp.classes
+namespace shoppp.model
 {
     class Product
     {
